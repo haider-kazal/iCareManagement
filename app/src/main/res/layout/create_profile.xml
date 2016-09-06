@@ -1,0 +1,303 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center_vertical">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.piash.icaremanagement.CreateProfile">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/pa" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Set Profile Type"
+                    android:textColor="#2196F3"/>
+                <Spinner
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spnType" >
+
+                </Spinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/etPatientName"
+            android:hint="Enter Name"
+            android:layout_marginTop="15dp"
+            android:background="#ffe4e4e4"
+            />
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Gender:"
+                android:textColor="#2196F3"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgGender"
+                android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                >
+              <RadioButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Male"
+                  android:onClick="onRadioButtonClick"
+                  android:id="@+id/rbMale"
+                  android:checked="false"
+                  android:textColor="#2196F3"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:onClick="onRadioButtonClick"
+                    android:id="@+id/rbFemale"
+                    android:textColor="#2196F3"/>
+                </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:text="Blood Group: "
+                android:textColor="#2196F3"
+                />
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spnBlood" >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Date: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#2196F3"
+                />
+            <TextView
+                android:id="@+id/tvCurrentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="DD-MM-YY"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#2196F3"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#2196F3"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/etAge"
+                android:inputType="numberDecimal"
+                android:background="#ffe4e4e4"
+                android:layout_marginLeft="31dp"
+                android:hint="0"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Height: "
+                android:textColor="#2196F3"/>
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="8dp"
+                android:background="#ffe4e4e4"
+                android:hint="0.0 feet"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:text="Weight: "
+                android:textColor="#2196F3"/>
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="5dp"
+                android:background="#ffe4e4e4"
+                android:hint="0.0"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:text="Phone: "
+                android:textColor="#2196F3"/>
+                />
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:layout_marginLeft="5dp"
+                android:hint="Phone Number(optional)"
+                android:background="#ffe4e4e4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textColor="#2196F3"
+                />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#ffe4e4e4"
+                android:inputType="textEmailAddress"
+                android:hint="Email(optional)"
+                android:layout_marginLeft="13dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Current Disease and Condition: "
+                android:textColor="#2196F3"
+                />
+
+            <EditText
+                android:id="@+id/etPatientCondition"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textMultiLine"
+                android:hint="Health condition or disease name. "
+                android:textColor="@android:color/black"
+                android:background="#ffe4e4e4"
+                android:gravity="top"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:textColor="#FFF"
+            android:background="#2196F3"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnSave"
+            android:text="Save"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

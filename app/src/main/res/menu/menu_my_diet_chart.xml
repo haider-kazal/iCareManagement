@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.piash.icaremanagement.MyDietChart">
+
+    <item android:id="@+id/action_addDiet" android:title="Add Chart"
+        android:orderInCategory="100" app:showAsAction="withText|always"
+        android:icon="@drawable/ic_action_new"/>
+</menu>
